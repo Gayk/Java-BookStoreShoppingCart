@@ -103,7 +103,7 @@ public class CartController extends HttpServlet {
 	private void updateCart(HttpServletRequest request, HttpServletResponse response) throws  ServletException{
 		HttpSession session = request.getSession();
 		int index = Integer.parseInt(request.getParameter("index"));
-		int quantity = Integer.parseInt(request.getParameter("quaintity"));
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
 		cart.updateCartItem(index, quantity);
 	}
